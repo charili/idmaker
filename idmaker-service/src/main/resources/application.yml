@@ -1,0 +1,27 @@
+server:
+  port: 6100
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  profiles:
+    active: test
+
+idmaker:
+  allow:
+    bizid: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 #业务id
+  machine:
+    ids: 1,2,3,4,5,6,7,8         # 机器id
+
+  zk:
+    url: ${distributeJob.zkServers}
+
+
+distributeJob:
+  #port: 9999
+  zkSessionTimeout: 10000
+  zkConnectionTimeout: 20000
+  logFilePath: /logs/joblogs
+  maxClientExecutingHours: 6
+
+
